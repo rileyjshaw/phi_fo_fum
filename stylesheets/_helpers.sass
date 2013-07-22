@@ -1,0 +1,6 @@
+// functions
+@function pow($num, $exp)
+  $result: 1
+  @for $i from 1 through $exp
+    $result: $result * $num
+  @return $result

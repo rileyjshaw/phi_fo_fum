@@ -1,0 +1,18 @@
+$b: 9px //base size
+$w: 7px //smaller size ("weak")
+$g: 1.61803398875 //golden ratio
+
+// returns a golden pixel value from a multiplier
+@function gpx($scale, $weak: false)
+  @if $weak
+    @return $w * pow($g, $scale)
+  @else
+    @return $b * pow($g, $scale)
+
+// generate golden typograpic styles for an element
+@mixin gtype($scale, $weak: false)
+  $s: gpx($scale, $weak)
+  font-size: $s
+  line-height: $s * $g
+  margin-top: $s
+  max-width: $s * pow($g, 8)

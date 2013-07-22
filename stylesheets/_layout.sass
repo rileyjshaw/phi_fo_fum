@@ -1,0 +1,35 @@
+html, body
+  width: 100%
+
+//three columns
+$col2: 100% / $g
+$col1: (100% - $col2) / $g
+$col3: 100% - $col2 - $col1
+
+nav, article, .extras
+  display: inline-block
+  font-size: 0
+nav
+  display: inline-block
+  width: $col1
+
+article
+  width: $col2
+  margin-bottom: gpx(4)
+  margin-left: $col1
+
+// make iframe embeds (videos, etc) full width
+.video-container
+  position: relative
+  margin: gpx(3) 0
+  padding-bottom: 56.25%
+  padding-top: 30px
+  height: 0
+  overflow: hidden
+
+.video-container iframe, .video-container object, .video-container embed
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
