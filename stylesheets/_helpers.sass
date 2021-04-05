@@ -4,3 +4,6 @@
   @for $i from 1 through $exp
     $result: $result * $num
   @return $result
+
+@function add_color($a, $b)
+  @return adjust_color($a, $red: red($b), $green: green($b), $blue: blue($b))

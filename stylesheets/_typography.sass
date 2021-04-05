@@ -1,28 +1,28 @@
 //don't like using * but it ensures future goodness
 *
   //x-browser hyphenation
-  -ms-word-break: break-all
   word-break: break-all
   word-break: break-word
+  -ms-hyphens: auto
   -webkit-hyphens: auto
-  -moz-hyphens: auto
   hyphens: auto
-  webkit-hyphenate-before: 2
-  -webkit-hyphenate-after: 3
-  hyphenate-lines: 3
+  -webkit-hyphenate-limit-before: 2
+  -webkit-hyphenate-limit-after: 3
+  -moz-hyphenate-limit-chars: 6 2 3
+  -webkit-hyphenate-limit-chars: 6 2 3
+  -ms-hyphenate-limit-chars: 6 2 3
+  hyphenate-limit-chars: 6 2 3
+  -ms-hyphenate-limit-lines: 3
+  -webkit-hyphenate-limit-lines: 3
+  hyphenate-limit-lines: 3
 
   //ligatures
-  -moz-font-feature-settings: "liga=1, dlig=1"
-  -ms-font-feature-settings: "liga", "dlig"
-  -webkit-font-feature-settings: "liga", "dlig"
-  -o-font-feature-settings: "liga", "dlig"
   font-feature-settings: "liga", "dlig"
 
-  //font stack fallback sizes
-  font-size-adjust: auto
-
   //go with font's default kerning, etc.
-   text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
 
 //paint it gold
 @for $i from 1 through 3
@@ -34,16 +34,14 @@ p
   @include gtype(2)
 
 //general styles
-html 
+html
   font-size: $b
-  font-family: 'Poly', serif
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol
   color: $ct
 h1, h2, h3, h4
-  font-family: 'Varela Round', sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif
 h1
   text-align: center
 a
-  color: $ca + #222
-  .linkwrap
-    text-decoration: none
-    color: $ca
+  color: $ca
+  text-decoration-color: add_color($ca, #333)
