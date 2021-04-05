@@ -1,4 +1,5 @@
 phi_fo_fum
 ==========
+**_Status: incomplete, abandoned_**
 
-A SASS template for superfast visual yumminess, based on the golden horatio
+A SASS template based on the golden ratio.
